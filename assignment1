@@ -1,0 +1,23 @@
+kubectl delete pod vote-94849dc97-k9pfc
+After deleting voting pod still voting service works and result service works
+kubectl get pods 
+voting pod restarted again
+
+
+
+kubectl delete pod worker-dd46d7584-6zt8c
+After deleting worker pod still voting service works and result service works
+kubectl get pods 
+worker pod restarted again
+
+
+kubectl delete pod db-b54cd94f4-xbmrz
+After deleting DB pod still voting service works and result service works
+kubectl get pods 
+db pod restarted again
+
+
+kubectl logs db-b54cd94f4-nx9dv
+This shows that that sql statements on the db are giving uniqueness constraint errors
+
+Result pod is working fine even after deletion of db pod as db pod is restarted
